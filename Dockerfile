@@ -8,7 +8,7 @@ RUN apt-get -q -y update && \
     rm -rf /var/lib/apt/lists/* /var/cache/*
 
 # clone the phpwkhtmltopdf-server project
-RUN git clone --depth 1 --branch v0.1.0 https://github.com/pay4later/comodo-server.git /opt/comodo-server && \
+RUN git clone --depth 1 --branch v0.1.0a https://github.com/pay4later/comodo-server.git /opt/comodo-server && \
     rm -rf /var/www/html/ && \
     ln -s /opt/comodo-server/public/ /var/www/html && \
     cd /opt/comodo-server/ && \
